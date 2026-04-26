@@ -11,7 +11,9 @@
     transition: 0.3s;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
     display: block;
     width: 100%;
     margin: 10px 0;
@@ -29,4 +31,20 @@ button {
     margin-top: 20px;
     color: #f5c518;
     text-decoration: none;
+}
+
+.cortes_form_container {
+    margin: 5px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #222;
+    border-radius: 10px;
+}
+
+.cortes_form_container input,
+.cortes_form_container select {
+    width: 95%;
+    margin: 5px auto;
+    padding: 8px;
+    box-sizing: border-box;
 }
