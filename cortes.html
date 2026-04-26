@@ -18,7 +18,7 @@
     </header>
 
     <div class="content">
-        <form method="POST" class="cortes_form_container" action="api/conexion.php">
+        <form id="formCortes" method="POST" class="cortes_form_container" action="api/conexion.php">
             <center>
                 <h2 class="subtitle">Agendar Cita de Corte</h2>
             </center>
@@ -54,6 +54,7 @@
             </select><br><br>
 
             <button type="submit">Agendar Cita</button>
+            <div id="mensaje_respuesta" style="margin-top: 15px; font-weight: bold; text-align: center;"></div>
         </form>
 
         <a href="index.html" class="return">← Volver al inicio</a>

@@ -49,8 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     } catch (Exception $e) {
         // Tip: En producción no muestres el mensaje de error completo, pero para clase está bien
-        echo "Error al conectar o insertar en MongoDB: " . $e->getMessage();
+        http_response_code(500);
+        echo json_encode(['error' => 'Error al conectar o insertar en MongoDB: ' . $e->getMessage()]);
     }
 } else {
-    echo "Acceso no autorizado.";
+    http_response_code(405);
+    echo json_encode(['error' => 'Acceso no autorizado.']);
 }
